@@ -10,18 +10,24 @@
 <body>
 
   <!--Header-->
-  <header class="site-header">
-    <div class="container">
-      <h1 class="logo">SolarNova</h1>
-      <nav class="nav">
-        <ul class="nav-list">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact" class="btn">Get a Quote</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header class="site-header">
+  <div class="container header-flex">
+    <h1 class="logo">SolarNova</h1>
+
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="btn">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
 
   <main>
 
@@ -82,3 +88,12 @@
 
 </body>
 </html>
+
+<script>
+  const toggleBtn = document.querySelector(".nav-toggle");
+  const nav = document.querySelector(".nav");
+
+  toggleBtn.addEventListener("click", () => {
+    nav.classList.toggle("nav-open");
+  });
+</script>
